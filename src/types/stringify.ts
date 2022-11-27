@@ -10,4 +10,4 @@ export type Stringify<T> = T extends
   | null
   | undefined
   ? `${T}`
-  : never;
+  : never

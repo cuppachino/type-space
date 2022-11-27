@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    
+
     "skipLibCheck": false,
     "noEmit": true,
     "exactOptionalPropertyTypes": true,
@@ -18,7 +18,7 @@
     "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
-    },
+    }
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests"]
 }

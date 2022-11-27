@@ -1,1 +1,1 @@
-export type AnyArray = any[] | readonly any[];
+export type AnyArray = any[] | readonly any[]

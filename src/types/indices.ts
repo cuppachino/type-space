@@ -1,4 +1,4 @@
-import type { IndexOf } from "@/main";
+import type { IndexOf } from '@/main'
 /**
  * generates a tuple based on the length of the input array
  * and fills each index with the index number.
@@ -9,6 +9,6 @@ import type { IndexOf } from "@/main";
 export type Indices<
   Tuple extends any[] | readonly any[],
   Accumulator extends any[] = []
-> = Accumulator["length"] extends Tuple["length"]
+> = Accumulator['length'] extends Tuple['length']
   ? Accumulator
-  : Indices<Tuple, [...Accumulator, Accumulator["length"]]>;
+  : Indices<Tuple, [...Accumulator, Accumulator['length']]>

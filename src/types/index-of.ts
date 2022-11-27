@@ -1,4 +1,4 @@
-import type { AnyArray, Indices } from "@/main";
+import type { AnyArray, Indices } from '@/main'
 
 /**
  * Create a union of the indices of `T`
@@ -6,4 +6,4 @@ import type { AnyArray, Indices } from "@/main";
  * @see {@link Indices}
  */
 export type IndexOf<T extends AnyArray> =
-  Indices<T> extends infer I extends number[] ? I[number] : never;
+  Indices<T> extends infer I extends number[] ? I[number] : never

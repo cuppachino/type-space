@@ -1,1 +1,1 @@
-export type NumberLiteral = `${number}`;
+export type NumberLiteral = `${number}`

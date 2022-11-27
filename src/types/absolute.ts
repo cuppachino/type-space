@@ -1,4 +1,4 @@
-import type { NumberLiteral } from "@/main";
+import type { NumberLiteral } from '@/main'
 
 /**
  * Asserts a number is positive
@@ -11,4 +11,4 @@ export type Absolute<N extends number | NumberLiteral> =
     ? `${N}` extends `-${infer R extends number | `${number}`}`
       ? R
       : never
-    : N;
+    : N
