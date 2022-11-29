@@ -1,8 +1,20 @@
 {
+  "name": "type-space",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cuppachino/type-space.git"
+  },
+  "version": "1.0.0",
   "main": "main.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "dist/main.d.ts",
   "scripts": {
     "test": "pnpm clear && jest -c jest.config.tsd.js",
     "format": "prettier -c . -w",
+    "build": "tsc --EmitDeclarationOnly --NoEmit false",
     "clear": "node -e \"process.stdout.write('\\033c')\""
   },
   "devDependencies": {
