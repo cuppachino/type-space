@@ -1,21 +1,23 @@
 {
   "name": "type-space",
+  "packageManager": "pnpm@7.13.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cuppachino/type-space.git"
   },
   "version": "1.0.0",
-  "main": "main.js",
   "files": [
-    "dist"
+    "dist",
+    "./package.json",
+    "./README.md",
+    "./LICENSE"
   ],
-  "type": "module",
-  "types": "dist/main.d.ts",
   "scripts": {
     "test": "pnpm clear && jest -c jest.config.tsd.js",
     "format": "prettier -c . -w",
-    "build": "tsc --EmitDeclarationOnly --NoEmit false",
-    "clear": "node -e \"process.stdout.write('\\033c')\""
+    "build": "tsc --build",
+    "clear": "node -e \"process.stdout.write('\\033c')\"",
+    "clean": "node -e \"require('fs').rmdirSync(require('path').resolve(__dirname, 'dist'), { recursive: true })\""
   },
   "devDependencies": {
     "@tsd/typescript": "^4.9.3",

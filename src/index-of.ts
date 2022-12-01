@@ -1,4 +1,4 @@
-import type { AnyArray, Indices } from '@/main'
+import type { AnyArray, Indices } from '.'
 
 /**
  * Create a union of the indices of `T`

@@ -1,4 +1,4 @@
-import type { TrimNumberLiteral } from '../src/main'
+import type { TrimNumberLiteral } from '../src'
 import { expectType } from 'tsd-lite'
 
 type ForEachPadLeft<

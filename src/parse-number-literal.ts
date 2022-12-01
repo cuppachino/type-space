@@ -1,4 +1,4 @@
-import type { NumberLiteral, Stringify } from '@/main'
+import type { NumberLiteral, Stringify } from '.'
 
 /** Coerces a `NumberLiteral` type to a `number`
  * @see {@link NumberLiteral}

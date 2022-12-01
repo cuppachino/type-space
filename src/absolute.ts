@@ -1,4 +1,4 @@
-import type { NumberLiteral } from '@/main'
+import type { NumberLiteral } from '.'
 
 /**
  * Asserts a number is positive

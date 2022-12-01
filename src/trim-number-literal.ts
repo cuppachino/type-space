@@ -1,4 +1,4 @@
-import { NumberLiteral, Stringify } from '@/main'
+import { NumberLiteral, Stringify } from '.'
 
 export type TrimNumberLiteral<N extends number | NumberLiteral> =
   Internal_Trim.Trim<N>
