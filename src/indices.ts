@@ -22,5 +22,5 @@ type FruitIndex = Indices<['apple', 'banana', 'plum']>[number] // 0 | 1 | 2
 
 */
 export type Indices<T extends unknown[] | readonly unknown[]> = {
-  [K in keyof T]: K extends `${infer N extends number}` ? N : never
+	[K in keyof T]: K extends `${infer N extends number}` ? N : never
 }

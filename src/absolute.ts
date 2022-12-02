@@ -1,4 +1,4 @@
-import type { NumberLiteral } from '.'
+import type { NumberLiteral } from 'type-space'
 
 /**
  * Coerces a number type to a positive number of the same magnitude.
@@ -7,8 +7,8 @@ import type { NumberLiteral } from '.'
  * @see {@link NumberLiteral}
  */
 export type Absolute<N extends number | NumberLiteral> =
-  `${N}` extends `-${number}`
-    ? `${N}` extends `-${infer R extends number | `${number}`}`
-      ? R
-      : never
-    : N
+	`${N}` extends `-${number}`
+		? `${N}` extends `-${infer R extends number | `${number}`}`
+			? R
+			: never
+		: N

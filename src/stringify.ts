@@ -3,11 +3,11 @@
  * @example Stringify<1 | 2> // '1' | '2'
  */
 export type Stringify<T> = T extends
-  | string
-  | number
-  | bigint
-  | boolean
-  | null
-  | undefined
-  ? `${T}`
-  : never
+	| string
+	| number
+	| bigint
+	| boolean
+	| null
+	| undefined
+	? `${T}`
+	: never

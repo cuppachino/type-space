@@ -1,4 +1,4 @@
-import type { UnknownArray, Indices } from '.'
+import type { Indices, UnknownArray } from 'type-space'
 
 /**
  * Create a union of the indices of `T`
@@ -6,4 +6,4 @@ import type { UnknownArray, Indices } from '.'
  * @see {@link Indices}
  */
 export type IndexOf<T extends UnknownArray> =
-  Indices<T> extends infer I extends number[] ? I[number] : never
+	Indices<T> extends infer I extends number[] ? I[number] : never
