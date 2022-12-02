@@ -27,12 +27,9 @@
 	"packageManager": "pnpm@7.17.1",
 	"scripts": {
 		"test": "pnpm clear && jest -c jest.config.tsd.js",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"lint:prettier": "prettier -c . -w",
-		"build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-		"clear": "node -e \"process.stdout.write('\\033c')\"",
-		"clean": "node -e \"require('fs').rmdirSync(require('path').resolve(__dirname, 'dist'), { recursive: true })\""
+		"lint": "prettier -c . -w && pnpm eslint . --fix",
+		"build": "tsc --build --clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+		"clear": "node -e \"process.stdout.write('\\033c')\""
 	},
 	"devDependencies": {
 		"@tsd/typescript": "^4.9.3",
