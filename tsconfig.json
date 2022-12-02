@@ -1,20 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "exactOptionalPropertyTypes": true,
-    "strict": true,
-    "baseUrl": ".",
-    "outDir": "dist",
-    "declarationDir": "dist",
-    "rootDir": "src",
-  },
-  "exclude": ["test/**/*"],
-  "include": ["src"]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"exactOptionalPropertyTypes": true,
+		"strict": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"declarationDir": "dist",
+		"rootDir": "src",
+		"paths": {
+			"type-space": ["./src/index.js"],
+			"type-space/*": ["./src/*.js"]
+		}
+	},
+	"exclude": ["test/**/*"],
+	"include": ["src"]
 }
