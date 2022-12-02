@@ -10,6 +10,12 @@
 		"type": "git",
 		"url": "https://github.com/Cuppachino/type-space.git"
 	},
+	"keywords": [
+		"typescript",
+		"types",
+		"type-utilities",
+		"generic-types"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
