@@ -8,6 +8,8 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		/* 📚 JSdoc */
+		'plugin:jsdoc/recommended',
 		/* 🎨 Prettier - Needs to be last so it can override other configs */
 		'plugin:prettier/recommended'
 	],
@@ -21,7 +23,7 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		project: ['./tsconfig.json', './tsconfig.eslint.json']
 	},
-	plugins: ['@typescript-eslint', 'prettier'],
+	plugins: ['@typescript-eslint', 'jsdoc', 'prettier'],
 	rules: {
 		// * 🔗 Imports
 		'@typescript-eslint/consistent-type-imports': [
@@ -36,6 +38,8 @@ module.exports = {
 			{
 				ignoreCase: false
 			}
-		]
+		],
+		// * 📚 JSdoc
+		'jsdoc/require-asterisk-prefix': ['error', 'never']
 	}
 }
