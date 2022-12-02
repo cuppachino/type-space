@@ -1,5 +1,5 @@
 export type { Absolute } from './absolute'
-export type { AnyArray } from './any-array'
+export type { UnknownArray } from './unknown-array'
 export type { IndexOf } from './index-of'
 export type { Indices } from './indices'
 export type { Join } from './join'
