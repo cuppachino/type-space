@@ -1,3 +1,3 @@
 # type-space
 
-I like to do weird things with types here.
+TypeScript type utilities for typing better TypeScript types.

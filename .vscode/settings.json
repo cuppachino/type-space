@@ -10,17 +10,7 @@
 		"**/node_modules": false
 	},
 	"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
 	}
 }
