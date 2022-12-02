@@ -1,7 +1,7 @@
 import type { NumberLiteral } from '.'
 
 /**
- * Asserts a number is positive
+ * Coerces a number type to a positive number of the same magnitude.
  * @example Absolute<-1> // 1
  * @example Absolute<'1'> // 1
  * @see {@link NumberLiteral}
