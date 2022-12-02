@@ -19,14 +19,14 @@ type HandleLeadingZeroIntegral<N> =
 		: N
 
 type Whole<N> =
-	// if the number has a leading zero, infer everything after the zero, and recurse.
+	/* if the number has a leading zero, infer everything after the zero, and recurse. */
 	N extends `0${infer N2}`
 		? Whole<`${N2}`>
-		: // otherwise return the number
+		: /* otherwise return the number */
 		  N
 
 type Fractional<N> =
-	// if the number ends in a decimal, but doesn't have any fractional digits, return the integral.
+	/* if the number ends in a decimal, but doesn't have any fractional digits, return the integral. */
 	N extends `${infer I}.`
 		? `${I}`
 		: /* if the number has both an integral and fractional part... */
