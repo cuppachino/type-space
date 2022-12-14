@@ -12,3 +12,7 @@ export type { UnknownArray } from 'type-space/unknown-array'
 
 // math
 export type { Absolute } from 'type-space/math/absolute'
+export type { IsInteger } from 'type-space/math/is-integer'
+export type { IsNegative } from 'type-space/math/is-negative'
+export type { IsPositive } from 'type-space/math/is-positive'
+export type { IsWhole } from 'type-space/math/is-whole'
