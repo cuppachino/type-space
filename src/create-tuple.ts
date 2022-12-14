@@ -1,9 +1,10 @@
-import { Length } from 'type-space'
+import type { Length } from 'type-space'
 
 /**
- * Generates a fixed-length N tuple filled with type T.
- * @example Fill<5> // [never, never, never, never, never]
- * @example Fill<3, 'a'> // ['a', 'a', 'a']
+ Generates a fixed-length N tuple filled with type T.
+ 
+ @example Fill<5> // [never, never, never, never, never]
+ @example Fill<3, 'a'> // ['a', 'a', 'a']
  */
 export type CreateTuple<
 	L extends number,
