@@ -38,12 +38,12 @@
 		"clear": "node -e \"process.stdout.write('\\033c')\""
 	},
 	"devDependencies": {
-		"@tsd/typescript": "^4.9.3",
+		"@tsd/typescript": "^4.9.4",
 		"@type-challenges/utils": "^0.1.1",
 		"@types/eslint": "^8.4.10",
-		"@typescript-eslint/eslint-plugin": "^5.45.0",
-		"@typescript-eslint/parser": "^5.45.0",
-		"eslint": "^8.28.0",
+		"@typescript-eslint/eslint-plugin": "^5.46.1",
+		"@typescript-eslint/parser": "^5.46.1",
+		"eslint": "^8.29.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-jsdoc": "^39.6.4",
 		"eslint-plugin-prettier": "^4.2.1",
