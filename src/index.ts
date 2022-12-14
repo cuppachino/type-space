@@ -16,3 +16,6 @@ export type { IsInteger } from 'type-space/math/is-integer'
 export type { IsNegative } from 'type-space/math/is-negative'
 export type { IsPositive } from 'type-space/math/is-positive'
 export type { IsWhole } from 'type-space/math/is-whole'
+
+// arithmetic
+export type { Add } from 'type-space/math/add'
