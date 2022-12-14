@@ -1,10 +1,9 @@
 import type { NumberLiteral, Stringify } from 'type-space'
 
-export type TrimNumberLiteral<N extends number | NumberLiteral> = Trim<N>
-
-type Trim<N> = Stringify<N> extends `${0}`
-	? '0'
-	: PositiveRational<NoDecimalWithoutLeadingZero<Stringify<N>>>
+export type TrimNumberLiteral<N extends number | NumberLiteral> =
+	Stringify<N> extends `${0}`
+		? '0'
+		: PositiveRational<NoDecimalWithoutLeadingZero<Stringify<N>>>
 
 type PositiveRational<N> = HandleLeadingZeroIntegral<
 	IfWhole<N, Whole<N>, Fractional<N>>
