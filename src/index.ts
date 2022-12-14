@@ -19,3 +19,4 @@ export type { IsWhole } from 'type-space/math/is-whole'
 
 // arithmetic
 export type { Add } from 'type-space/math/add'
+export type { Subtract } from 'type-space/math/subtract'
