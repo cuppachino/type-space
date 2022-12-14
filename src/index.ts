@@ -1,4 +1,5 @@
 export type { Absolute } from 'type-space/absolute'
+export type { CreateTuple } from 'type-space/create-tuple'
 export type { IndexOf } from 'type-space/index-of'
 export type { Indices } from 'type-space/indices'
 export type { Join } from 'type-space/join'
