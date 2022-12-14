@@ -1,4 +1,3 @@
-export type { Absolute } from 'type-space/absolute'
 export type { CreateTuple } from 'type-space/create-tuple'
 export type { IndexOf } from 'type-space/index-of'
 export type { Indices } from 'type-space/indices'
@@ -10,3 +9,6 @@ export type { Simplify } from 'type-space/simplify'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 export type { UnknownArray } from 'type-space/unknown-array'
+
+// math
+export type { Absolute } from 'type-space/math/absolute'
