@@ -4,6 +4,8 @@ TypeScript type utilities for typing better TypeScript types.
 
 ## Installation
 
+[@cuppachino/type-space](https://www.npmjs.com/package/@cuppachino/type-space)
+
 ```ps
 pnpm add -D @cuppachino/type-space
 ```
