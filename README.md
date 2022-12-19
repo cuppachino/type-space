@@ -76,8 +76,6 @@ language.
 
 - [`ExtractFunctions`](src/extract/extract-functions.ts): Creates a new type of
   all property functions and methods in a type.
-  View[`source`](tests/extends-extract-functions.test.ts) for a fun example
-  case.
 
 ### Extends
 
