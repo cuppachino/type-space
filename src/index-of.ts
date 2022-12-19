@@ -7,4 +7,6 @@ import type { Indices, UnknownArray } from 'type-space'
  @see {@link Indices}
  */
 export type IndexOf<T extends UnknownArray> =
-	Indices<T> extends infer I extends number[] ? I[number] : never
+	Indices<T> extends infer I extends number[] | readonly number[]
+		? I[number]
+		: never
