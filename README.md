@@ -1,8 +1,10 @@
-# type-space
+# Type Space
 
-TypeScript type utilities for typing better TypeScript types.
+Welcome to Type Space, a TypeScript library that provides a suite of utility types for enhancing your TypeScript code. With `@cuppachino/type-space`, you can perform a wide range of type operations, including numeric calculations, string manipulation, tuple operations, and more.
 
-## Installation
+## 📦 Installation
+
+Use your favorite package manager to install `@cuppachino/type-space` as a developer dependency.
 
 [@cuppachino/type-space](https://www.npmjs.com/package/@cuppachino/type-space)
 
@@ -14,22 +16,43 @@ pnpm add -D @cuppachino/type-space
 npm install --save-dev @cuppachino/type-space
 ```
 
-## Quick Reference
+## 🔎 Quick Reference
 
-### Base Types
+The source code is commented with descriptions and examples to help you understand how each utility functions; however, it is assumed that you carry some knowledge of TypeScript, and the explanations provided are meant to supplement that knowledge, not provide a comprehensive introduction to the language.
 
-- [`NumberLiteral`]: A stringified number literal.
+### 🍎 Base Types
 
-### Arithmetic Types
+- [`NumberLiteral`](src/number-literal.ts): A stringified number literal.
 
-- [`Absolute`]: Coerces a number or `NumberLiteral` to a positive number of the same magnitude.
+### 🧮 Arithmetic Types
 
-- [`Add`]: Returns the sum of two number literals
-- [`Subtract`]: Returns the difference between two number literals
+- [`Absolute`](src/math/absolute.ts): Coerces a number literal to a positive `number` of the same magnitude.
+- [`Add`](src/math/add.ts): Returns the sum of two number literals.
+- [`Subtract`](src/math/subtract.ts): Returns the difference between two number literals.
 
-### Tuple Types
+### 🔢 Numeric Types
+- [`IsInteger`](src/math/is-integer.ts): A boolean type that is true if a number literal is an integer.
+- [`IsPositive`](src/math/is-positive.ts): A boolean type that is true if a number literal is positive.
+- [`IsNegative`](src/math/is-negative.ts): A boolean type that is true if a number literal is negative.
+- [`IsWhole`](src/math/is-whole.ts): A boolean type that is true if a number literal is a whole number.
+- [`ParseNumberLiteral`](src/parse-number-literal.ts): Coerces a `NumberLiteral` type to a `number`
 
-- [`CreateTuple`]: Generates a fixed-length tuple.
-- [`IndexOf`]: Returns a union of a tuple's indices.
-- [`Indices`]: Generates a tuple of a tuple's indices.
-- [`Join`]: Joins a tuple of strings into a single string, separated by a delimiter.
+### 💭 String Types
+- [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
+- [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
+
+### 📜 Tuple Types
+
+- [`CreateTuple`](src/create-tuple.ts): Generates a fixed-length tuple.
+- [`IndexOf`](src/index-of.ts): Returns a union of a tuple's indices.
+- [`Indices`](src/indices.ts): Generates a tuple of a tuple's indices.
+- [`Join`](src/join.ts): Joins a tuple of strings into a single string, separated by a delimiter.
+- [`Length`](src/length.ts): Extracts the length property from an array or tuple.
+
+### Utility Types
+
+- [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties.
+
+---
+
+I hope you have fun with these utilities. Thank you for using `type-space`!
