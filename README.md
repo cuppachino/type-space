@@ -18,7 +18,11 @@ npm install --save-dev @cuppachino/type-space
 
 ## 🔎 Quick Reference
 
-The source code is commented with descriptions and examples to help you understand how each utility functions; however, it is assumed that you carry some knowledge of TypeScript, and the explanations provided are meant to supplement that knowledge, not provide a comprehensive introduction to the language.
+The source code is commented with descriptions and examples to help you
+understand how each utility functions; however, it is assumed that you carry
+some knowledge of TypeScript, and the explanations provided are meant to
+supplement that knowledge, not provide a comprehensive introduction to the
+language.
 
 ### 🍎 Base Types
 
