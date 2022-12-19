@@ -27,6 +27,8 @@ language.
 ### 🍎 Base Types
 
 - [`NumberLiteral`](src/number-literal.ts): A stringified number literal.
+- [`UnknownArray`](src/unknown-array.ts): An alias for `unknown[] | readonly[]`,
+  safer than `any`
 
 ### 🧮 Arithmetic Types
 
