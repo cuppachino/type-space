@@ -8,8 +8,7 @@ import type { ExtendsFunction } from '../extends/extends-function'
  Extracts all properties from `T` that extend functions or methods.
  
  @see
- {@link [source tests ](https://github.com/Cuppachino/type-space/blob/main/tests/extends-extract-functions.test.ts)}
- for a fun example of how to use this type.
+ {@link [ExtendsFunction](https://github.com/Cuppachino/type-space/blob/main/src/extends/extends-function.ts)}
  */
 export type ExtractFunctions<T> = {
 	[K in keyof T as ExtendsFunction<T[K], K>]: T[K]
