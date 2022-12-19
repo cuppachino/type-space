@@ -1,5 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-// ? for compatibility with constructables
+import type { ExtendsFunction } from '../extends/extends-function'
+
+/* eslint-disable @typescript-eslint/no-explicit-any 
+-- // ? for compatibility with constructables 
+*/
 
 /**
  Extracts all properties from `T` that extend functions or methods.
@@ -9,9 +12,5 @@
  for a fun example of how to use this type.
  */
 export type ExtractFunctions<T> = {
-	[K in keyof T]: T[K] extends (...args: any[]) => any
-		? T[K]
-		: T[K] extends (...args: readonly any[]) => any
-		? T[K]
-		: never
+	[K in keyof T as ExtendsFunction<T[K], K>]: T[K]
 }

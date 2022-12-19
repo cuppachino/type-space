@@ -7,10 +7,7 @@
  {@link [source tests ](https://github.com/Cuppachino/type-space/blob/main/tests/extends-extract-functions.test.ts)}
  for a fun example of how to use this type.
  */
-export type ExtendsFunction<T, R = T> = T extends (
-	...args: unknown[]
-) => unknown
-	? R
-	: T extends (...args: readonly unknown[]) => unknown
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type ExtendsFunction<T, R = T> = T extends (...args: any[]) => any
 	? R
 	: never
