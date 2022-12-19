@@ -1,5 +1,3 @@
-import type { UnknownArray } from 'type-space'
-
 /**
  Checks if a type extends a function or method.
  
@@ -10,7 +8,9 @@ import type { UnknownArray } from 'type-space'
  for a fun example of how to use this type.
  */
 export type ExtendsFunction<T, R = T> = T extends (
-	...args: UnknownArray
+	...args: unknown[]
 ) => unknown
+	? R
+	: T extends (...args: readonly unknown[]) => unknown
 	? R
 	: never
