@@ -31,6 +31,7 @@ The source code is commented with descriptions and examples to help you understa
 - [`Subtract`](src/math/subtract.ts): Returns the difference between two number literals.
 
 ### 🔢 Numeric Types
+
 - [`IsInteger`](src/math/is-integer.ts): A boolean type that is true if a number literal is an integer.
 - [`IsPositive`](src/math/is-positive.ts): A boolean type that is true if a number literal is positive.
 - [`IsNegative`](src/math/is-negative.ts): A boolean type that is true if a number literal is negative.
@@ -38,6 +39,7 @@ The source code is commented with descriptions and examples to help you understa
 - [`ParseNumberLiteral`](src/parse-number-literal.ts): Coerces a `NumberLiteral` type to a `number`
 
 ### 💭 String Types
+
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
 
