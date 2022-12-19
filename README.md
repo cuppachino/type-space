@@ -72,6 +72,23 @@ language.
 
 - [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties.
 
+### Extract
+
+- [`ExtractFunctions`](src/extract/extract-functions.ts): Creates a new type of
+  all property functions and methods in a type.
+  View[`source`](tests/extends-extract-functions.test.ts) for a fun example
+  case.
+
+### Extends
+
+All `Extends\<Type>` have two type parameters: `<T, R = T>`.
+
+> - `T` is the type to check.
+> - `R` is the type returned when `T` extends the name of the generic.
+
+- [`ExtendsFunction`](src/extends/extends-function.ts): Returns a type if the
+  given type extends a function or method.
+
 ---
 
 I hope you have fun with these utilities. Thank you for using `type-space`!
