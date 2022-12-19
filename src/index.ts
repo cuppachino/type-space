@@ -20,3 +20,9 @@ export type { IsWhole } from 'type-space/math/is-whole'
 // arithmetic
 export type { Add } from 'type-space/math/add'
 export type { Subtract } from 'type-space/math/subtract'
+
+// extends
+export type { ExtendsFunction } from 'type-space/extends/extends-function'
+
+// extract
+export type { ExtractFunctions } from 'type-space/extract/extract-functions'
