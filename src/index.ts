@@ -23,6 +23,7 @@ export type { Subtract } from 'type-space/math/subtract'
 
 // extract
 export type { ExtractFunctions } from 'type-space/extract/extract-functions'
+export type { ExtractSetMembers } from 'type-space/extract/extract-set-members'
 
 // extends
 export type { ExtendsFunction } from 'type-space/extends/extends-function'

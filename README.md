@@ -76,6 +76,8 @@ language.
 
 - [`ExtractFunctions`](src/extract/extract-functions.ts): Creates a new type of
   all property functions and methods in a type.
+- [`ExtractSetMembers`](src/extract/extract-set-members.ts): Creates a union
+  type of members in a `Set`.
 
 ### Extends
 
