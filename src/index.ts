@@ -8,6 +8,9 @@ export type { ParseNumberLiteral } from 'type-space/parse-number-literal'
 export type { Simplify } from 'type-space/simplify'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
+
+// base
+export type { NumberLiteral } from 'type-space/number-literal'
 export type { UnknownArray } from 'type-space/unknown-array'
 
 // math
