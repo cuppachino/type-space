@@ -23,23 +23,44 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		project: ['./tsconfig.json', './tsconfig.eslint.json']
 	},
-	plugins: ['@typescript-eslint', 'jsdoc', 'prettier'],
+	plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jsdoc', 'prettier'],
 	rules: {
-		// * 🔗 Imports
+		// * 👕 ESLint
+		'@typescript-eslint/no-unused-vars': ['off'],
+		'@typescript-eslint/no-empty-function': ['off'],
+		'@typescript-eslint/no-explicit-any': ['off'],
+		'@typescript-eslint/no-empty-interface': ['off'],
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{
 				prefer: 'type-imports',
-				disallowTypeAnnotations: true
+				disallowTypeAnnotations: false
 			}
 		],
+		'@typescript-eslint/ban-types': [
+			'warn',
+			{
+				types: {
+					'{}': false
+				}
+			}
+		],
+		// * 📚 TSdoc
+		'tsdoc/syntax': 'warn',
+		// * 📚 JSdoc
+		'jsdoc/require-asterisk-prefix': ['error', 'always'],
+		'jsdoc/require-jsdoc': ['off'],
+		'jsdoc/require-returns': ['off'],
+		'jsdoc/require-param': ['off'],
+		'jsdoc/require-param-type': ['off'],
+		'jsdoc/require-param-description': ['off'],
+		'jsdoc/check-tag-names': ['off'],
+		// * 🔗 Imports
 		'sort-imports': [
 			'error',
 			{
 				ignoreCase: false
 			}
-		],
-		// * 📚 JSdoc
-		'jsdoc/require-asterisk-prefix': ['error', 'never']
+		]
 	}
 }
