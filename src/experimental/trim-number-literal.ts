@@ -1,4 +1,5 @@
-import type { NumberLiteral, Stringify } from 'type-space'
+import type { NumberLiteral } from 'type-space/number-literal'
+import type { Stringify } from 'type-space/stringify'
 
 export type TrimNumberLiteral<N extends number | NumberLiteral> =
 	Stringify<N> extends `${0}`
