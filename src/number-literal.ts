@@ -1,4 +1,4 @@
 /**
- A stringified number literal.
+ * A stringified number literal.
  */
 export type NumberLiteral = `${number}`

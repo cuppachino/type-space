@@ -1,10 +1,16 @@
 import type { IsWhole } from 'type-space'
 
 /**
- Validate whether two number are whole. Returns `Then` if true, otherwise `Else`.
- 
- @example IfBothWhole<1, 2, true, false> // true
- @example IfBothWhole<-1, 1.5, true, false> // false
+ * Validate whether two number are whole. Returns `Then` if true, otherwise `Else`.
+ *
+ * @example
+ * ```
+ * IfBothWhole<1, 2, true, false> // true
+ * ```
+ * @example
+ * ```
+ * IfBothWhole<-1, 1.5, true, false> // false
+ * ```
  */
 export type IfBothWhole<
 	A extends number,
