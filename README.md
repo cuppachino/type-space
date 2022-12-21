@@ -68,7 +68,10 @@ language.
 - [`IndexOf`](src/index-of.ts): Returns a union of a tuple's indices.
 - [`Indices`](src/indices.ts): Generates a tuple of a tuple's indices.
 - [`Join`](src/join.ts): Joins a tuple of strings into a single string, separated by a delimiter.
-- [`Length`](src/length.ts): Extracts the length property from an array or tuple.
+- [`Length`](src/length.ts): Extracts the length property from an array or
+  tuple.
+- [`MergeAll`](src/merge-all.ts): Merge all type members of a tuple into a
+  single type.
 
 ## 🧰 Utility Types
 
