@@ -1,4 +1,4 @@
-import type { ExtendsFunction } from '../extends/extends-function'
+import type { ExtendsFunction } from 'type-space/extends/extends-function'
 
 /* eslint-disable @typescript-eslint/no-explicit-any 
 -- // ? for compatibility with constructables 
