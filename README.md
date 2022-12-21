@@ -39,7 +39,9 @@ language.
 
 - [`NumberLiteral`](src/number-literal.ts): A stringified number literal.
 - [`UnknownArray`](src/unknown-array.ts): An alias for `unknown[] | readonly unknown[]`,
-  safer than `any`
+  safer than `any`.
+- [`UnknownRecord`](src/unknown-record.ts): An alias for `Record<PropertyKey, unknown>`,
+  safer than `any` or `{}`.
 
 ## 🧮 Arithmetic Types
 
