@@ -1,40 +1,77 @@
+import { expectAssignable, expectType } from 'tsd-lite'
 import type { MergeAll } from '../src/merge-all'
-import type { Simplify } from '../src/simplify'
-import type { UnknownRecord } from '../src/unknown-record'
-import { expectType } from 'tsd-lite'
 
-// * Case 1
-declare const expectedBasicMerge: {
-	a: string
-	b: string
-	c: string
-}
-declare function merge1<Level extends readonly UnknownRecord[]>(
-	...levels: [...Level]
-): MergeAll<Level>
+// * Case 1.A
 
-expectType<typeof expectedBasicMerge>(
-	merge1({ a: 'a' }, { b: 'b' }, { c: 'c' })
-)
+declare type Color =
+	| 'blue'
+	| 'cyan'
+	| 'green'
+	| 'yellow'
+	| 'red'
+	| 'bold'
+	| 'bgBlack'
+declare type RawLevel = Record<string, Color | [Color, ...Color[]]>
+declare type Level = Record<string, [Color, ...Color[]]>
 
-// * Case 2
-type Color = 'red' | 'green' | 'yellow' | 'bold' | 'white'
-type LevelConfig = Record<string, Color | Color[]>
-declare const levels: readonly [
-	{ error: ['red', 'bold'] },
+declare function mergeLevelConfig<T extends RawLevel[]>(
+	...levels: [...T]
+): MergeAll<T>
+
+declare const levels: [
+	{ error: ['red', 'bold', 'bgBlack'] },
 	{ warn: 'yellow' },
-	{ info: 'green' }
+	{ info: 'cyan' },
+	{ debug: ['blue', 'bold'] }
 ]
-declare const expectedMerge: {
-	error: ['red', 'bold']
-	warn: 'yellow'
-	info: 'green'
-}
-declare function merge2<Level extends readonly LevelConfig[]>(
-	...levels: [...Level]
-): MergeAll<Level>
 
-expectType<typeof expectedMerge>(merge2(...levels))
-expectType<Simplify<typeof expectedMerge & { debug: ('white' | 'bold')[] }>>(
-	merge2(...levels, { debug: ['white', 'bold'] })
+declare type ExpectedMerge = {
+	error: ['red', 'bold', 'bgBlack']
+	warn: 'yellow'
+	info: 'cyan'
+	debug: ['blue', 'bold']
+}
+
+expectType<ExpectedMerge>(mergeLevelConfig(...levels))
+
+expectType<ExpectedMerge>(
+	mergeLevelConfig(
+		{ error: ['red', 'bold', 'bgBlack'] },
+		{ warn: 'yellow' },
+		{ info: 'cyan' },
+		{ debug: ['blue', 'bold'] }
+	)
 )
+
+// * Case 1.B
+
+declare const mergedLevels: MergeAll<typeof levels>
+
+declare type NormalizeLevel<L extends RawLevel> = {} & {
+	[K in keyof L]: L[K] extends Color[] ? [...L[K]] : [L[K]]
+}
+
+declare type ExpectedNormalized = {
+	error: ['red', 'bold', 'bgBlack']
+	warn: ['yellow']
+	info: ['cyan']
+	debug: ['blue', 'bold']
+}
+
+declare function normalizeMergedLevels<Config extends RawLevel>(
+	levelConfig: Config
+): NormalizeLevel<Config>
+
+expectType<ExpectedNormalized>(normalizeMergedLevels(mergedLevels))
+
+expectAssignable<Level>(normalizeMergedLevels(mergedLevels))
+
+// * Case 1.C
+
+declare function defineLogLevels<Config extends RawLevel[]>(
+	...levels: [...Config]
+): NormalizeLevel<MergeAll<Config>>
+
+expectType<ExpectedNormalized>(defineLogLevels(...levels))
+
+expectAssignable<Level>(defineLogLevels(...levels))
