@@ -72,6 +72,9 @@ language.
   tuple.
 - [`MergeAll`](src/merge-all.ts): Merge all type members of a tuple into a
   single type.
+- [`PartitionKeys`](src/partition-keys.ts): Extract a union of keys for each member in a tuple into a new tuple; order is preserved.
+- [`PartitionValues`](src/partition-values.ts): Create a tuple of value(s) for the given key(s) in each member of a tuple; order is preserved.
+- [`PartitionPick`](src/partition-pick.ts): Maps picked properties from each member of a tuple into a new tuple; order is preserved.
 
 ## 🧰 Utility Types
 

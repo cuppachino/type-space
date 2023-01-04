@@ -26,6 +26,11 @@ export type { IsWhole } from 'type-space/math/is-whole'
 export type { Add } from 'type-space/math/add'
 export type { Subtract } from 'type-space/math/subtract'
 
+// Partition
+export type { PartitionKeys } from 'type-space/partition-keys'
+export type { PartitionPick } from 'type-space/partition-pick'
+export type { PartitionValues } from 'type-space/partition-values'
+
 // extract
 export type { ExtractFunctions } from 'type-space/extract/extract-functions'
 export type { ExtractSetMembers } from 'type-space/extract/extract-set-members'
