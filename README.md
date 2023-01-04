@@ -79,6 +79,7 @@ language.
 ## 🧰 Utility Types
 
 - [`KeyOf`](src/key-of.ts): Creates a super union of all keys in a union, unlike `keyof` which only preserves shared members.
+- [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
 - [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties.
 
 ### Extract
