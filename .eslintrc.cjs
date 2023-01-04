@@ -1,4 +1,3 @@
-/** @type { import("@types/eslint").Linter.BaseConfig } */
 module.exports = {
 	root: true,
 	env: {
@@ -20,10 +19,10 @@ module.exports = {
 		sourceType: 'module',
 
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-		tsconfigRootDir: __dirname,
-		project: ['./tsconfig.json', './tsconfig.eslint.json']
+		tsconfigRootDir: './',
+		project: './tsconfig.eslint.json'
 	},
-	plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jsdoc', 'prettier'],
+	plugins: ['@typescript-eslint', 'jsdoc', 'eslint-plugin-tsdoc', 'prettier'],
 	rules: {
 		// * 👕 ESLint
 		'@typescript-eslint/no-unused-vars': ['off'],

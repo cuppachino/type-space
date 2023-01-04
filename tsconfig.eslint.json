@@ -1,3 +1,10 @@
 {
-	"include": ["./tests/**/*.test.ts", "./.eslintrc.cjs", "./jest.config.tsd.js"]
+	"compilerOptions": {
+		"composite": true,
+		"allowJs": true
+	},
+	"extends": "./tsconfig.json", // <-- since the entire src folder is already included here
+	"files": [".eslintrc.cjs", "jest.config.tsd.js"],
+	"include": ["src", "tests"],
+	"exclude": ["node_modules", "dist"] // <--- override the exclude property to not have test files here
 }
