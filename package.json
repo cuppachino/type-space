@@ -1,6 +1,6 @@
 {
 	"name": "@cuppachino/type-space",
-	"version": "1.4.1",
+	"version": "1.5.0",
 	"license": "gpl-3.0",
 	"author": {
 		"name": "Cuppachino",
@@ -21,7 +21,7 @@
 	"files": [
 		"dist"
 	],
-	"packageManager": "pnpm@7.17.1",
+	"packageManager": "pnpm@7.21.0",
 	"scripts": {
 		"test": "pnpm clear && jest -c jest.config.tsd.js",
 		"lint": "prettier -c . -w && pnpm eslint . --fix",
