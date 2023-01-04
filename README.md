@@ -65,6 +65,7 @@ language.
 ## 📜 Tuple Types
 
 - [`CreateTuple`](src/create-tuple.ts): Generates a fixed-length tuple.
+- [`Flat`](src/flat.ts): Recursively flatten a tuple up to a given depth.
 - [`IndexOf`](src/index-of.ts): Returns a union of a tuple's indices.
 - [`Indices`](src/indices.ts): Generates a tuple of a tuple's indices.
 - [`Join`](src/join.ts): Joins a tuple of strings into a single string, separated by a delimiter.
