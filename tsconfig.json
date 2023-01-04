@@ -15,21 +15,11 @@
 		"declarationDir": "dist",
 		"rootDir": "src",
 		"paths": {
-			"type-space": [
-				"./src/index.js"
-			],
-			"type-space/*": [
-				"./src/*.js"
-			]
+			"type-space": ["./src/index.js"],
+			"type-space/*": ["./src/*.js"]
 		},
 		"newLine": "LF"
 	},
-	"include": [
-		"./src/**/*"
-	],
-	"exclude": [
-		"node_modules",
-		"dist",
-		"tests"
-	]
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules", "dist", "tests"]
 }
