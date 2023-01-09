@@ -12,6 +12,10 @@ export type { Simplify } from 'type-space/simplify'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 
+// utility
+export type { Combine } from 'type-space/combine'
+export type { Simplify } from 'type-space/simplify'
+
 // base
 export type { NumberLiteral } from 'type-space/number-literal'
 export type { UnknownArray } from 'type-space/unknown-array'
