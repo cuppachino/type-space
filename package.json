@@ -10,6 +10,7 @@
 		"type": "git",
 		"url": "https://github.com/Cuppachino/type-space.git"
 	},
+	"description": "A collection of type utilities for TypeScript.",
 	"keywords": [
 		"typescript",
 		"types",
