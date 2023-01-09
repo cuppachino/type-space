@@ -1,4 +1,4 @@
-import type { CreateTuple } from '../src'
+import type { CreateTuple } from '../src/create-tuple'
 import { expectType } from 'tsd-lite'
 
 declare const case1: CreateTuple<4>
