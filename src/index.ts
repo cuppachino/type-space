@@ -8,7 +8,7 @@ export type { Length } from 'type-space/length'
 export type { MergeAll } from 'type-space/merge-all'
 export type { Mutable } from 'type-space/mutable'
 export type { ParseNumberLiteral } from 'type-space/parse-number-literal'
-export type { Simplify } from 'type-space/simplify'
+export type { PartialSome } from 'type-space/partial-some'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 
