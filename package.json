@@ -21,7 +21,7 @@
 	"files": [
 		"dist"
 	],
-	"packageManager": "pnpm@7.21.0",
+	"packageManager": "pnpm@7.23.0",
 	"scripts": {
 		"test": "pnpm clear && jest -c jest.config.tsd.js",
 		"lint": "prettier -c . -w && pnpm eslint . --fix",
