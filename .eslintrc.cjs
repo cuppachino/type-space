@@ -50,10 +50,12 @@ module.exports = {
 		'jsdoc/require-asterisk-prefix': ['error', 'always'],
 		'jsdoc/require-jsdoc': ['off'],
 		'jsdoc/require-returns': ['off'],
+		'jsdoc/require-returns-type': ['off'],
 		'jsdoc/require-param': ['off'],
 		'jsdoc/require-param-type': ['off'],
 		'jsdoc/require-param-description': ['off'],
 		'jsdoc/check-tag-names': ['off'],
+		'jsdoc/check-param-names': ['off'],
 		// * 🔗 Imports
 		'sort-imports': [
 			'error',
