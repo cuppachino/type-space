@@ -9,6 +9,7 @@ export type { MergeAll } from 'type-space/merge-all'
 export type { Mutable } from 'type-space/mutable'
 export type { ParseNumberLiteral } from 'type-space/parse-number-literal'
 export type { PartialSome } from 'type-space/partial-some'
+export type { PickAll } from 'type-space/pick-all'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 
