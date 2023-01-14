@@ -28,7 +28,7 @@
 		"lint": "prettier -c . -w && pnpm eslint . --fix",
 		"build": "tsc --build --clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
 		"package": "pnpm pack --pack-destination release",
-		"clear": "node -e \"process.stdout.write('\\033c')\""
+		"clear": "node -e console.clear()"
 	},
 	"devDependencies": {
 		"@tsd/typescript": "^4.9.4",
