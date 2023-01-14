@@ -1,4 +1,5 @@
-import type { IsInteger, IsPositive } from 'type-space'
+import type { IsInteger } from './is-integer'
+import type { IsPositive } from './is-positive'
 
 /**
  * Returns whether the number is a whole number.

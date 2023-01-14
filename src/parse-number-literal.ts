@@ -1,4 +1,5 @@
-import type { NumberLiteral, Stringify } from 'type-space'
+import type { NumberLiteral } from './number-literal'
+import type { Stringify } from './stringify'
 
 /**
  * Coerces a `NumberLiteral` type to a `number`

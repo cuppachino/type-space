@@ -1,4 +1,5 @@
-import type { Indices, UnknownArray } from 'type-space'
+import type { Indices } from './indices'
+import type { UnknownArray } from './unknown-array'
 
 /**
  * Create a union type from the indices of `T`

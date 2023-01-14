@@ -1,4 +1,4 @@
-import type { NumberLiteral } from 'type-space'
+import type { NumberLiteral } from '../number-literal'
 
 /**
  * Coerces a number type to a positive number of the same magnitude.

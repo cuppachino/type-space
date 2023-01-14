@@ -1,4 +1,5 @@
-import type { CreateTuple, Length } from 'type-space'
+import type { CreateTuple } from '../create-tuple'
+import type { Length } from '../length'
 
 /**
  * Returns a literal sum of two natural numbers.

@@ -1,4 +1,4 @@
-import type { IsWhole } from 'type-space'
+import type { IsWhole } from './is-whole'
 
 /**
  * Validate whether two number are whole. Returns `Then` if true, otherwise `Else`.

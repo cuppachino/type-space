@@ -1,5 +1,6 @@
-import type { CreateTuple, Length } from 'type-space'
-import type { IfBothWhole } from 'type-space/math/if-both-whole'
+import type { CreateTuple } from '../create-tuple'
+import type { IfBothWhole } from './if-both-whole'
+import type { Length } from '../length'
 
 /**
  * Returns the literal difference between two natural numbers.

@@ -1,4 +1,4 @@
-import type { ExtendsFunction } from 'type-space/extends/extends-function'
+import type { ExtendsFunction } from '../extends/extends-function'
 
 /**
  * Extracts all properties from `T` that extend functions or methods.
