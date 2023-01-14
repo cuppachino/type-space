@@ -1,18 +1,40 @@
+import { PickAll } from './pick-all'
 /**
- * Creates a super union of all keys in a union, unlike `keyof` which only preserves shared members.
+ * Extract all keys from every member of a union type.
+ * Unlike `keyof`, this includes properties that might not be present in all members of the union type.
  *
  * @example
+ * Try extracting keys or properties from a discriminated union type:
+ * ```ts
+ * declare const union: { kind: 0, str: 'str' } | { kind: 1, fn: () => void }
+ * type Union = typeof union
  * ```
- * declare const foobar: { foo: string, bar: string } | { bar: string }
- * declare const foobars: typeof foobar[]
+ * @example
+ * Using standard `keyof` and indexed access:
+ * ```ts
+ * type _UnionKinds = Union['kind']
+ * // 0 | 1 // ✅
  *
- * // using keyof we lose the `foo` property because it's not present in all members of the union.
- * type incorrect_a = keyof typeof foobar // "bar"
- * type incorrect_b = keyof typeof foobars[number] // "bar"
- * // Using KeyOf we have a true union of keys from all members.
- * type FooBarKeys_a = KeyOf<typeof foobar> // "bar" | "foo"
- * type FooBarKeys_b = KeyOf<typeof foobars[number]> // "bar" | "foo"
+ * type _UnionValues = Union[keyof Union]
+ * // 0 | 1 ❓ missing 'str' and () => void
+ *
+ * //@ts-expect-error - Property 'fn' and 'str' are not assignable to all members of the union.
+ * type _UnionKeys = Union['kind' | 'str' | 'fn']
+ * // error ❌
  * ```
+ * @example
+ * Using `KeyOf<Union>` and `PickAll<Union>`:
+ * ```ts
+ * type UnionKeys = KeyOf<Union>
+ * // 'kind' | 'str' | 'fn' // ✅
+ *
+ * type UnionProps = PickAll<Union>
+ * // { kind: 0 | 1; str: 'str' | undefined; fn: () => void | undefined } // ✅
+ *
+ * type UnionValues = PickAll<Union>[UnionKeys]
+ *  // 0 | 1 | 'str' | () => void | undefined // ✅
+ * ```
+ * @see {@link PickAll} to extract properties from a union type.
  */
 export type KeyOf<Union, Otherwise = never> = Union extends Union
 	? keyof Union
