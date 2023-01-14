@@ -80,7 +80,7 @@ language.
 ## 🧰 Utility Types
 
 - [`Combine`](src/combine.ts): Simplifies a type by mapping over its properties.
-- [`KeyOf`](src/key-of.ts): Creates a super union of all keys in a union, unlike `keyof` which only preserves shared members.
+- [`KeyOf`](src/key-of.ts): Extracts all keys from every member of a union type, unlike `keyof` which only preserves shared members' keys.
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
 - [`PartialSome`](src/partial-some.ts): Returns a new type that allows the specified keys to be undefined.
 - [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
