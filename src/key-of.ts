@@ -14,4 +14,6 @@
  * type FooBarKeys_b = KeyOf<typeof foobars[number]> // "bar" | "foo"
  * ```
  */
-export type KeyOf<T> = T extends T ? keyof T : never
+export type KeyOf<Union, Otherwise = never> = Union extends Union
+	? keyof Union
+	: Otherwise
