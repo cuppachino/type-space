@@ -15,6 +15,7 @@ export type { Stringify } from 'type-space/stringify'
 // utility
 export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
+export type { UnionToIntersection } from 'type-space/union-to-intersection'
 
 // base
 export type { NumberLiteral } from 'type-space/number-literal'
