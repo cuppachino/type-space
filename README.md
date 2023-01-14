@@ -84,6 +84,7 @@ language.
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
 - [`PartialSome`](src/partial-some.ts): Returns a new type that allows the specified keys to be undefined.
 - [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
+- [`UnionLiteral`](src/union-literal.ts): Create a union from a literal and primitive type without losing the literal type.
 
 ### Extract
 
