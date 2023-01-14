@@ -83,7 +83,7 @@ language.
 - [`KeyOf`](src/key-of.ts): Extracts all keys from every member of a union type, unlike `keyof` which only preserves shared members' keys.
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
 - [`PartialSome`](src/partial-some.ts): Returns a new type that allows the specified keys to be undefined.
-- [`PickAll`](src/pick-all.ts): Extract properties from *all* members in a union, missing properties default to `| undefined`.
+- [`PickAll`](src/pick-all.ts): Extract properties from _all_ members in a union, missing properties default to `| undefined`.
 - [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
 - [`UnionLiteral`](src/union-literal.ts): Create a union from a literal and primitive type without losing the literal type.
 - [`UnionToIntersection`](src/union-to-intersection.ts): Create an intersection from all members of a union type.
