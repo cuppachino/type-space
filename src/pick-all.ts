@@ -3,8 +3,8 @@ import type { UnionToIntersection } from './union-to-intersection'
 
 /**
  * Extract all properties from every member in a union type.
- * Akin to `Pick`, properties are selected by key, akin to `Extract`, the entire property is extracted `{key: value}`.
- * If a property doesn't exist in all members of `Union`, it will be extracted a union between the property type and `Otherwise`.
+ * Like `Pick`, properties are selected by key, but similar to `Extract`, the entire property is extracted `{key: value}`.
+ * If a property doesn't exist in all members of `Union`, the property is unioned with `Otherwise`.
  *
  * @param Union - A discriminated union type to extract properties from.
  * @param Keys - The specific properties to extract from `Union`.
