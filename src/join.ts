@@ -1,3 +1,4 @@
+import type { Stringifiable } from './stringifiable'
 /**
  * Joins an array of strings into a single string, separated by a delimiter.
  *
@@ -11,9 +12,12 @@
  * ```
  */
 export type Join<
-	T extends string[],
-	D extends string = '',
-	Acc extends string = ''
-> = T extends [infer Head extends string, ...infer Tail extends string[]]
+	T extends Stringifiable[],
+	D extends Stringifiable = '',
+	Acc extends Stringifiable = ''
+> = T extends [
+	infer Head extends Stringifiable,
+	...infer Tail extends Stringifiable[]
+]
 	? Join<Tail, D, `${Acc}${Head}${Tail extends [] ? '' : D}`>
 	: Acc
