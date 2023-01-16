@@ -38,6 +38,7 @@ language.
 ## 🍎 Base Types
 
 - [`NumberLiteral`](src/number-literal.ts): A stringified number literal.
+- [`Stringifiable`](src/stringifiable.ts): An alias for `string | number | bigint | boolean | null | undefined`.
 - [`UnknownArray`](src/unknown-array.ts): An alias for `unknown[] | readonly unknown[]`,
   safer than `any`.
 - [`UnknownRecord`](src/unknown-record.ts): An alias for `Record<PropertyKey, unknown>`,

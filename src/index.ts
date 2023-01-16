@@ -21,6 +21,7 @@ export type { UnionLiteral } from 'type-space/union-literal'
 
 // base
 export type { NumberLiteral } from 'type-space/number-literal'
+export type { Stringifiable } from 'type-space/stringifiable'
 export type { UnknownArray } from 'type-space/unknown-array'
 export type { UnknownRecord } from 'type-space/unknown-record'
 
