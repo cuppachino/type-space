@@ -91,6 +91,8 @@ language.
 
 ### Extract
 
+- [`ExtractRequired`](src/extract/extract-required.ts): Extracts all non-optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes).
+- [`ExtractOptional`](src/extract/extract-optional.ts): Extracts all optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes)
 - [`ExtractFunctions`](src/extract/extract-functions.ts): Creates a new type of
   all property functions and methods in a type.
 - [`ExtractSetMembers`](src/extract/extract-set-members.ts): Creates a union
