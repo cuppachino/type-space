@@ -42,6 +42,7 @@ export type { PartitionPick } from 'type-space/partition-pick'
 export type { PartitionValues } from 'type-space/partition-values'
 
 // extract
+export type { ExtractRequired } from 'type-space/extract/extract-required'
 export type { ExtractFunctions } from 'type-space/extract/extract-functions'
 export type { ExtractSetMembers } from 'type-space/extract/extract-set-members'
 
