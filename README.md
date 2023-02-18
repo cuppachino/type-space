@@ -29,11 +29,7 @@ npm install --save-dev @cuppachino/type-space
 
 # 🔎 Quick Reference
 
-The source code is commented with descriptions and examples to help you
-understand how each utility functions; however, it is assumed that you carry
-some knowledge of TypeScript, and the explanations provided are meant to
-supplement that knowledge, not provide a comprehensive introduction to the
-language.
+The source code is fully tsdoc'd, so you can use your IDE's intellisense to reference examples and descriptions at any time. Click any `type` for more documentation.
 
 ## 🍎 Base Types
 
@@ -80,7 +76,11 @@ language.
 
 ### A la Array.prototype
 
-The following tuple types are inspired by the `Array.prototype` methods of the same name. It is more useful for these types to return a new tuple type instead of the length or items themselves, as the original tuple is not modified.
+> #### sig
+>
+> ```ts
+> Action :: <Tuple> -> NewTuple
+> ```
 
 - [`Pop`](src/tuples/pop): Removes the last element from a tuple. Does not return the removed element.
 - [`Push`](src/tuples/push): Adds one element type to the end of a tuple. Does not return the new length of the tuple.
@@ -109,8 +109,12 @@ The following tuple types are inspired by the `Array.prototype` methods of the s
 
 ### Extends
 
-All `Extends\<Type>` have two type parameters: `<T, R = T>`.
-
+> #### | sig
+>
+> ```ts
+> Extends :: <T, R = T> -> boolean
+> ```
+>
 > - `T` is the type to check.
 > - `R` is the type returned when `T` extends the name of the generic.
 
