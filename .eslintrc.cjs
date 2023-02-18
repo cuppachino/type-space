@@ -56,6 +56,15 @@ module.exports = {
 		'jsdoc/require-param-description': ['off'],
 		'jsdoc/check-tag-names': ['off'],
 		'jsdoc/check-param-names': ['off'],
+		'jsdoc/check-indentation': ['warn'],
+		'jsdoc/sort-tags': ['warn'],
+		/**
+		 * todo: 🚧 Enable when supported by ESLint 8
+		 *
+		 * 'jsdoc/check-examples': ['error'],
+		 *
+		 * @see [issue](https://github.com/eslint/eslint/issues/14745)
+		 */
 		// * 🔗 Imports
 		'sort-imports': [
 			'error',
