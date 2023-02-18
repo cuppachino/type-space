@@ -3,6 +3,7 @@ import { PickAll } from './pick-all'
  * Extract all keys from every member of a union type.
  * Unlike `keyof`, this includes properties that might not be present in all members of the union type.
  *
+ * @see {@link PickAll} to extract properties from a union type.
  * @example
  * Try extracting keys or properties from a discriminated union type:
  * ```ts
@@ -34,7 +35,6 @@ import { PickAll } from './pick-all'
  * type UnionValues = PickAll<Union>[UnionKeys]
  *  // 0 | 1 | 'str' | () => void | undefined // ✅
  * ```
- * @see {@link PickAll} to extract properties from a union type.
  */
 export type KeyOf<Union, Otherwise = never> = Union extends Union
 	? keyof Union

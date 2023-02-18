@@ -1,4 +1,4 @@
-import type { Split } from '../src'
+import type { Split } from '../src/split'
 import { expectType } from 'tsd-lite'
 
 type CaseString = 'a-b-c'

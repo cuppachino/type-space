@@ -1,4 +1,5 @@
-import type { PartialSome } from '../src'
+import type { PartialSome } from '../src/partial-some'
+
 import { expectType } from 'tsd-lite'
 
 declare const CLIENT_TOKENS: readonly [
@@ -9,7 +10,7 @@ declare const CLIENT_TOKENS: readonly [
 ]
 
 declare const credentials: PartialSome<
-	Record<typeof CLIENT_TOKENS[number], string>,
+	Record<(typeof CLIENT_TOKENS)[number], string>,
 	'certificate'
 >
 

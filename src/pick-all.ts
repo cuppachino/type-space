@@ -8,8 +8,8 @@ import type { UnionToIntersection } from './union-to-intersection'
  *
  * @param Union - A discriminated union type to extract properties from.
  * @param Keys - The specific properties to extract from `Union`.
- * @defaultValue all `KeyOf<Union>`
  * @param Otherwise - The type to unionize with value types that don't exist in all members of `Union`.
+ * @defaultValue all `KeyOf<Union>`
  * @defaultValue `undefined`
  * @example
  * Try extracting properties from a discriminated union type:
@@ -34,7 +34,7 @@ import type { UnionToIntersection } from './union-to-intersection'
  * type PossibleUnionValues = PickAll<Union>[UnionKeys]
  * // 0 | 1 | 'str' | () => void | undefined // ✅
  * ```
- *  @example
+ * @example
  * #### Compare against standard indexed access with `keyof`:
  * ```ts
  * type _UnionKeys keyof Union

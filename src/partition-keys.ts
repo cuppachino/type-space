@@ -4,6 +4,7 @@ import type { UnknownArray } from './unknown-array'
 /**
  * Create a tuple of key unions from each member in a collection. The order is preserved (without recursion).
  *
+ * @see {@link KeyOf} if you don't need the tuple structure.
  * @example
  * ```
  * declare const levelConfig: [
@@ -21,7 +22,6 @@ import type { UnknownArray } from './unknown-array'
  * //   "name" | "colors"
  * // ]
  * ```
- * @see {@link KeyOf} if you don't need the tuple structure.
  * @example
  * ```
  * type LevelConfigKeys = KeyOf<typeof levelConfig[number]> // "name" | "colors"

@@ -1,4 +1,4 @@
-import type { Subtract } from '../src'
+import type { Subtract } from '../src/math/subtract'
 import { expectType } from 'tsd-lite'
 
 declare const case1: Subtract<2, 1>

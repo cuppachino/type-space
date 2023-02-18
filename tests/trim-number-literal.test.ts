@@ -1,5 +1,5 @@
 import type { NumberLiteral } from '../src/number-literal'
-import type { TrimNumberLiteral } from '../src/experimental'
+import type { TrimNumberLiteral } from '../src/experimental/trim-number-literal'
 import { expectType } from 'tsd-lite'
 
 type TrimMany<T extends NumberLiteral[]> = {

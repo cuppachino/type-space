@@ -3,6 +3,7 @@ import type { NumberLiteral } from '../number-literal'
 /**
  * Coerces a number type to a positive number of the same magnitude.
  *
+ * @see {@link NumberLiteral}
  * @example
  * ```
  * Absolute<-1> // 1
@@ -11,7 +12,6 @@ import type { NumberLiteral } from '../number-literal'
  * ```
  * Absolute<'1'> // 1
  * ```
- * @see {@link NumberLiteral}
  */
 export type Absolute<N extends number | NumberLiteral> =
 	`${N}` extends `-${number}`

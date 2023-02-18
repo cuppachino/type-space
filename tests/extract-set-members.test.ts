@@ -7,6 +7,6 @@ declare class Config {
 	>
 }
 
-declare const level: ExtractSetMembers<typeof Config['logLevels']>
+declare const level: ExtractSetMembers<(typeof Config)['logLevels']>
 
 expectType<'error' | 'warn' | 'info' | 'debug' | 'verbose'>(level)
