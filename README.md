@@ -78,6 +78,15 @@ language.
 - [`PartitionValues`](src/partition-values.ts): Create a tuple of value(s) for the given key(s) in each member of a tuple; order is preserved.
 - [`PartitionPick`](src/partition-pick.ts): Maps picked properties from each member of a tuple into a new tuple; order is preserved.
 
+### A la Array.prototype
+
+The following tuple types are inspired by the `Array.prototype` methods of the same name. It is more useful for these types to return a new tuple type instead of the length or items themselves, as the original tuple is not modified.
+
+- [`Pop`](src/tuples/pop): Removes the last element from a tuple. Does not return the removed element.
+- [`Push`](src/tuples/push): Adds one element type to the end of a tuple. Does not return the new length of the tuple.
+- [`Shift`](src/tuples/shift): Removes the first element from a tuple type. Does not return the removed element.
+- [`Unshift`](src/tuples/unshift): Adds one element type to the beginning of a tuple. Does not return the new length of the tuple.
+
 ## 🧰 Utility Types
 
 - [`Combine`](src/combine.ts): Simplifies a type by mapping over its properties.

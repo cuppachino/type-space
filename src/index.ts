@@ -13,6 +13,12 @@ export type { PickAll } from 'type-space/pick-all'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 
+// tuples
+export type { Pop } from 'type-space/tuples/pop'
+export type { Push } from 'type-space/tuples/push'
+export type { Shift } from 'type-space/tuples/shift'
+export type { Unshift } from 'type-space/tuples/unshift'
+
 // utility
 export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
@@ -36,7 +42,7 @@ export type { IsWhole } from 'type-space/math/is-whole'
 export type { Add } from 'type-space/math/add'
 export type { Subtract } from 'type-space/math/subtract'
 
-// Partition
+// partition
 export type { PartitionKeys } from 'type-space/partition-keys'
 export type { PartitionPick } from 'type-space/partition-pick'
 export type { PartitionValues } from 'type-space/partition-values'
