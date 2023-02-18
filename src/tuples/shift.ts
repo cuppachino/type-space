@@ -6,7 +6,8 @@ import type { UnknownArray } from '../unknown-array'
  * @remarks Its worth noting `Pop`, `Push`, `Shift`, and `Unshift` are inspired by JS; however, the types are not 1:1 for design reasons. More information can be found in [README](https://github.com/Cuppachino/type-space/#type-space).
  * @example
  * ```
- * Shift<[1, 2, 3]> // [2, 3]
+ * declare const tuple: [1, 2, 3]
+ * type Tuple = Shift<typeof tuple> // [2, 3]
  * ```
  */
 export type Shift<T extends UnknownArray> = T extends [any, ...infer U]

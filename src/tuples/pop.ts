@@ -7,8 +7,8 @@ import type { UnknownArray } from '../unknown-array'
  * @see `Last` if you need the type of the last element (like `Array.prototype.pop`)
  * @example
  * ```
- * type Tuple = [1, 2, 3]
- * type LeadingRest = Pop<[1, 2, 3]> // [1, 2]
+ * declare const tuple: [1, 2, 3]
+ * type Tuple = Pop<typeof tuple> // [1, 2]
  * ```
  */
 export type Pop<T extends UnknownArray> = T extends [...infer U, any]
