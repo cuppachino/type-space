@@ -1,4 +1,5 @@
 export type { CreateTuple } from 'type-space/create-tuple'
+export type { Constructor } from 'type-space/constructor'
 export type { Flat } from 'type-space/flat'
 export type { IndexOf } from 'type-space/index-of'
 export type { Indices } from 'type-space/indices'
