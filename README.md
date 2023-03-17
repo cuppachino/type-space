@@ -82,10 +82,10 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 > Action :: <Tuple> -> NewTuple
 > ```
 
-- [`Pop`](src/tuples/pop): Removes the last element from a tuple. Does not return the removed element.
-- [`Push`](src/tuples/push): Adds one element type to the end of a tuple. Does not return the new length of the tuple.
-- [`Shift`](src/tuples/shift): Removes the first element from a tuple type. Does not return the removed element.
-- [`Unshift`](src/tuples/unshift): Adds one element type to the beginning of a tuple. Does not return the new length of the tuple.
+- [`Pop`](src/tuples/pop.ts): Removes the last element from a tuple. Does not return the removed element.
+- [`Push`](src/tuples/push.ts): Adds one element type to the end of a tuple. Does not return the new length of the tuple.
+- [`Shift`](src/tuples/shift.ts): Removes the first element from a tuple type. Does not return the removed element.
+- [`Unshift`](src/tuples/unshift.ts): Adds one element type to the beginning of a tuple. Does not return the new length of the tuple.
 
 ## 🧰 Utility Types
 
