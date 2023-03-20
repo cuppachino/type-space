@@ -23,6 +23,7 @@ export type { Unshift } from 'type-space/tuples/unshift'
 // utility
 export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
+export type { Subset } from 'type-space/subset'
 export type { UnionToIntersection } from 'type-space/union-to-intersection'
 export type { UnionLiteral } from 'type-space/union-literal'
 
