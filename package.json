@@ -22,15 +22,18 @@
 	"files": [
 		"dist"
 	],
-	"packageManager": "pnpm@7.25.0",
+	"packageManager": "pnpm@7.29.3",
 	"scripts": {
 		"test": "pnpm clear && jest -c jest.config.tsd.js",
 		"lint": "prettier -c . -w && pnpm eslint . --fix",
 		"build": "tsc --build --clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
 		"package": "pnpm pack --pack-destination release",
+		"version-package": "changeset version && pnpm lint",
+		"release": "pnpm build && changeset publish",
 		"clear": "node -e console.clear()"
 	},
 	"devDependencies": {
+		"@changesets/cli": "^2.26.0",
 		"@tsd/typescript": "^4.9.5",
 		"@type-challenges/utils": "^0.1.1",
 		"@types/eslint": "^8.21.1",
