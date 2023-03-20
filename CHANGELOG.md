@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.14.1
+
+### Patch Changes
+
+- 2c37b50: add tsc-alias as dev dep intead of using global installation
+
 ## 1.14.0
 
 ### Minor Changes
