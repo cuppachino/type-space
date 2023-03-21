@@ -24,7 +24,7 @@
 	],
 	"packageManager": "pnpm@7.29.3",
 	"scripts": {
-		"test": "pnpm clear && jest -c jest.config.tsd.js",
+		"test": "pnpm clear && pnpm tsc --noEmit --emitDeclarationOnly false && jest -c jest.config.tsd.js",
 		"lint": "prettier -c . -w && pnpm eslint . --fix",
 		"build": "tsc --build --clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
 		"package": "pnpm pack --pack-destination release",

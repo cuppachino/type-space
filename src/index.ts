@@ -11,16 +11,30 @@ export type { Mutable } from 'type-space/mutable'
 export type { ParseNumberLiteral } from 'type-space/parse-number-literal'
 export type { PartialSome } from 'type-space/partial-some'
 export type { PickAll } from 'type-space/pick-all'
+
+// strings
+export type { Chars } from 'type-space/strings/chars'
 export type { Split } from 'type-space/split'
+export type { SplitAt } from 'type-space/strings/split-at'
 export type { Stringify } from 'type-space/stringify'
+export type { StringIncludes } from 'type-space/strings/string-includes'
+export type { StringIncludesProper } from 'type-space/strings/string-includes-proper'
+
+// numbers / strings
+export type { NumberLike } from 'type-space/number-like'
+export type { IntoNumber } from 'type-space/into/into-number'
+export type { IntoNumberLiteral } from 'type-space/into/into-number-literal'
 
 // tuples
 export type { Pop } from 'type-space/tuples/pop'
+export type { PopBy } from 'type-space/tuples/pop-by'
 export type { Push } from 'type-space/tuples/push'
 export type { Shift } from 'type-space/tuples/shift'
 export type { Unshift } from 'type-space/tuples/unshift'
+export type { ShiftBy } from 'type-space/tuples/shift-by'
 
 // utility
+export type { Assert } from 'type-space/assert'
 export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
 export type { Subset } from 'type-space/subset'

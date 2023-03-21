@@ -43,30 +43,37 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 ## 🧮 Arithmetic Types
 
 - [`Absolute`](src/math/absolute.ts): Coerces a number literal to a positive `number` of the same magnitude.
-- [`Add`](src/math/add.ts): Returns the sum of two number literals.
-- [`Subtract`](src/math/subtract.ts): Returns the difference between two number literals.
+- [`Add`](src/math/add.ts): Return the sum of two number literals.
+- [`Subtract`](src/math/subtract.ts): Return the difference between two number literals.
 
 ## 🔢 Numeric Types
 
+- [`IntoNumber`](src/into-number.ts): Coerce a `NumberLike` type to a `number`
+- [`IntoNumberLiteral`](src/into-number-literal.ts): Coerce a `NumberLike` type to a `NumberLiteral`
 - [`IsInteger`](src/math/is-integer.ts): A boolean type that is true if a number literal is an integer.
 - [`IsPositive`](src/math/is-positive.ts): A boolean type that is true if a number literal is positive.
 - [`IsNegative`](src/math/is-negative.ts): A boolean type that is true if a number literal is negative.
 - [`IsWhole`](src/math/is-whole.ts): A boolean type that is true if a number literal is a whole number.
-- [`ParseNumberLiteral`](src/parse-number-literal.ts): Coerces a `NumberLiteral` type to a `number`
+- [`NumberLike`](src/number-like.ts): Coerce either a `number` or a `NumberLiteral` into a union between the two.
+- [`ParseNumberLiteral`](src/parse-number-literal.ts): Coerce a `NumberLiteral` type to a `number`
 
 ## 💭 String Types
 
+- [`Chars`](src/chars.ts): Splits a string literal into a tuple of characters. Reads more clearly than `Split` in some cases.
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
+- [`SplitAt`](src/strings/split-at.ts): Split a string literal into a tuple of two strings, separated by the given index, non-inclusive.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
+- [`StringIncludes`](src/string-includes.ts): A boolean type that is true if a string literal includes a given substring (⊆).
+- [`StringIncludesProper`](src/string-includes-proper.ts): A boolean type that is true if a string literal includes a given substring, and the substring is not the entire string (⊂).
 
 ## 📜 Tuple Types
 
-- [`CreateTuple`](src/create-tuple.ts): Generates a fixed-length tuple.
+- [`CreateTuple`](src/create-tuple.ts): Generate a fixed-length tuple.
 - [`Flat`](src/flat.ts): Recursively flatten a tuple up to a given depth.
-- [`IndexOf`](src/index-of.ts): Returns a union of a tuple's indices.
-- [`Indices`](src/indices.ts): Generates a tuple of a tuple's indices.
+- [`IndexOf`](src/index-of.ts): Return a union of a tuple's indices.
+- [`Indices`](src/indices.ts): Generate a tuple of a tuple's indices.
 - [`Join`](src/join.ts): Joins a tuple of strings into a single string, separated by a delimiter.
-- [`Length`](src/length.ts): Extracts the length property from an array or
+- [`Length`](src/length.ts): Extract the length property from an array or
   tuple.
 - [`MergeAll`](src/merge-all.ts): Merge all type members of a tuple into a
   single type.
@@ -82,30 +89,33 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 > Action :: <Tuple> -> NewTuple
 > ```
 
-- [`Pop`](src/tuples/pop.ts): Removes the last element from a tuple. Does not return the removed element.
+- [`Pop`](src/tuples/pop.ts): Remove the last element from a tuple. Does not return the removed element.
+- [`PopBy`](src/tuples/pop-by.ts): Remove the last `N` elements from a tuple.
 - [`Push`](src/tuples/push.ts): Adds one element type to the end of a tuple. Does not return the new length of the tuple.
-- [`Shift`](src/tuples/shift.ts): Removes the first element from a tuple type. Does not return the removed element.
+- [`Shift`](src/tuples/shift.ts): Remove the first element from a tuple type. Does not return the removed element.
+- [`ShiftBy`](src/tuples/shift-by.ts): Remove the first `N` elements from a tuple.
 - [`Unshift`](src/tuples/unshift.ts): Adds one element type to the beginning of a tuple. Does not return the new length of the tuple.
 
 ## 🧰 Utility Types
 
-- [`Combine`](src/combine.ts): Simplifies a type by mapping over its properties.
-- [`KeyOf`](src/key-of.ts): Extracts all keys from every member of a union type, unlike `keyof` which only preserves shared members' keys.
+- [`Assert`](src/assert.ts): Assert that a type is assignable to another type; shorthand for `T extends U ? T : never`.
+- [`Combine`](src/combine.ts): Simplify a type by mapping over its properties.
+- [`KeyOf`](src/key-of.ts): Extract all keys from every member of a union type, unlike `keyof` which only preserves shared members' keys.
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
-- [`PartialSome`](src/partial-some.ts): Returns a new type that allows the specified keys to be undefined.
+- [`PartialSome`](src/partial-some.ts): Return a new type that allows the specified keys to be undefined.
 - [`PickAll`](src/pick-all.ts): Extract properties from _all_ members in a union, missing properties default to `| undefined`.
-- [`Simplify`](src/simplify.ts): Simplifies a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
+- [`Simplify`](src/simplify.ts): Simplify a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
 - [`Subset`](src/subset.ts): TypeScript equivalent of `⊆`.
 - [`UnionLiteral`](src/union-literal.ts): Create a union from a literal and primitive type without losing the literal type.
 - [`UnionToIntersection`](src/union-to-intersection.ts): Create an intersection from all members of a union type.
 
 ### Extract
 
-- [`ExtractRequired`](src/extract/extract-required.ts): Extracts all non-optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes).
-- [`ExtractOptional`](src/extract/extract-optional.ts): Extracts all optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes)
-- [`ExtractFunctions`](src/extract/extract-functions.ts): Creates a new type of
+- [`ExtractRequired`](src/extract/extract-required.ts): Extract all non-optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes).
+- [`ExtractOptional`](src/extract/extract-optional.ts): Extract all optional properties from a type; ℹ️[exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes)
+- [`ExtractFunctions`](src/extract/extract-functions.ts): Create a new type of
   all property functions and methods in a type.
-- [`ExtractSetMembers`](src/extract/extract-set-members.ts): Creates a union
+- [`ExtractSetMembers`](src/extract/extract-set-members.ts): Create a union
   type of members in a `Set`.
 
 ### Extends
@@ -119,7 +129,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 > - `T` is the type to check.
 > - `R` is the type returned when `T` extends the name of the generic.
 
-- [`ExtendsFunction`](src/extends/extends-function.ts): Returns a type if the
+- [`ExtendsFunction`](src/extends/extends-function.ts): Return a type if the
   given type extends a function or method.
 
 ---
