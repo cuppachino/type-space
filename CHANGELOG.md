@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.15.1
+
+### Patch Changes
+
+- 501813b: chore(deps): update dependency typescript to v5
+
 ## 1.15.0
 
 ### Minor Changes
