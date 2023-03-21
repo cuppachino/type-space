@@ -19,6 +19,8 @@ export type { Stringify } from 'type-space/stringify'
 
 // numbers / strings
 export type { NumberLike } from 'type-space/number-like'
+export type { IntoNumber } from 'type-space/into/into-number'
+export type { IntoNumberLiteral } from 'type-space/into/into-number-literal'
 
 // tuples
 export type { Pop } from 'type-space/tuples/pop'

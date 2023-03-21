@@ -48,6 +48,8 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 
 ## 🔢 Numeric Types
 
+- [`IntoNumber`](src/into-number.ts): Coerce a `NumberLike` type to a `number`
+- [`IntoNumberLiteral`](src/into-number-literal.ts): Coerce a `NumberLike` type to a `NumberLiteral`
 - [`IsInteger`](src/math/is-integer.ts): A boolean type that is true if a number literal is an integer.
 - [`IsPositive`](src/math/is-positive.ts): A boolean type that is true if a number literal is positive.
 - [`IsNegative`](src/math/is-negative.ts): A boolean type that is true if a number literal is negative.
