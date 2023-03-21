@@ -57,6 +57,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 
 ## 💭 String Types
 
+- [`Chars`](src/chars.ts): Splits a string literal into a tuple of characters. Reads more clearly than `Split` in some cases.
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
 
