@@ -52,6 +52,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 - [`IsPositive`](src/math/is-positive.ts): A boolean type that is true if a number literal is positive.
 - [`IsNegative`](src/math/is-negative.ts): A boolean type that is true if a number literal is negative.
 - [`IsWhole`](src/math/is-whole.ts): A boolean type that is true if a number literal is a whole number.
+- [`NumberLike`](src/number-like.ts): Coerce either a `number` or a `NumberLiteral` into a union between the two.
 - [`ParseNumberLiteral`](src/parse-number-literal.ts): Coerce a `NumberLiteral` type to a `number`
 
 ## 💭 String Types

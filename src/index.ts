@@ -14,6 +14,9 @@ export type { PickAll } from 'type-space/pick-all'
 export type { Split } from 'type-space/split'
 export type { Stringify } from 'type-space/stringify'
 
+// numbers / strings
+export type { NumberLike } from 'type-space/number-like'
+
 // tuples
 export type { Pop } from 'type-space/tuples/pop'
 export type { Push } from 'type-space/tuples/push'
