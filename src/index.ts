@@ -15,6 +15,7 @@ export type { PickAll } from 'type-space/pick-all'
 // strings
 export type { Chars } from 'type-space/strings/chars'
 export type { Split } from 'type-space/split'
+export type { SplitAt } from 'type-space/strings/split-at'
 export type { Stringify } from 'type-space/stringify'
 
 // numbers / strings
@@ -31,6 +32,7 @@ export type { Unshift } from 'type-space/tuples/unshift'
 export type { ShiftBy } from 'type-space/tuples/shift-by'
 
 // utility
+export type { Assert } from 'type-space/assert'
 export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
 export type { Subset } from 'type-space/subset'

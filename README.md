@@ -61,6 +61,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 
 - [`Chars`](src/chars.ts): Splits a string literal into a tuple of characters. Reads more clearly than `Split` in some cases.
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
+- [`SplitAt`](src/strings/split-at.ts): Split a string literal into a tuple of two strings, separated by the given index, non-inclusive.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
 
 ## 📜 Tuple Types
@@ -95,6 +96,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 
 ## 🧰 Utility Types
 
+- [`Assert`](src/assert.ts): Assert that a type is assignable to another type; shorthand for `T extends U ? T : never`.
 - [`Combine`](src/combine.ts): Simplify a type by mapping over its properties.
 - [`KeyOf`](src/key-of.ts): Extract all keys from every member of a union type, unlike `keyof` which only preserves shared members' keys.
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
