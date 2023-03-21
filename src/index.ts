@@ -18,6 +18,7 @@ export type { Split } from 'type-space/split'
 export type { SplitAt } from 'type-space/strings/split-at'
 export type { Stringify } from 'type-space/stringify'
 export type { StringIncludes } from 'type-space/strings/string-includes'
+export type { StringIncludesProper } from 'type-space/strings/string-includes-proper'
 
 // numbers / strings
 export type { NumberLike } from 'type-space/number-like'
