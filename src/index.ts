@@ -17,6 +17,7 @@ export type { Chars } from 'type-space/strings/chars'
 export type { Split } from 'type-space/split'
 export type { SplitAt } from 'type-space/strings/split-at'
 export type { Stringify } from 'type-space/stringify'
+export type { StringIncludes } from 'type-space/strings/string-includes'
 
 // numbers / strings
 export type { NumberLike } from 'type-space/number-like'

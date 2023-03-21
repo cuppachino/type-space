@@ -24,9 +24,9 @@ import type { Subtract } from '../math/subtract'
  */
 export type SplitAt<
 	S extends string,
-	I extends NumberLike<IndexOf<[...Chars<S>, never]>> = Assert<
-		0,
-		NumberLike<IndexOf<[...Chars<S>, never]>>
+	I extends NumberLike<IndexOf<[...Chars<S>]>> = Assert<
+		NumberLike<0>,
+		NumberLike<IndexOf<[...Chars<S>]>>
 	>
 > = Chars<S> extends infer C extends Stringifiable[]
 	? [
@@ -44,11 +44,11 @@ type _SplitAt_Cases = [
 	Expect<Equal<SplitAt<'david', '2'>, ['da', 'vid']>>,
 	Expect<Equal<SplitAt<'david', '3'>, ['dav', 'id']>>,
 	Expect<Equal<SplitAt<'david', '4'>, ['davi', 'd']>>,
-	Expect<Equal<SplitAt<'david', '5'>, ['david', '']>>,
+	// Expect<Equal<SplitAt<'david', '5'>, ['david', '']>>, // this can be done if I extends NumberLike<Length<[...Chars<S>, never]>>
 	Expect<Equal<SplitAt<'david', 0>, ['', 'david']>>,
 	Expect<Equal<SplitAt<'david', 1>, ['d', 'avid']>>,
 	Expect<Equal<SplitAt<'david', 2>, ['da', 'vid']>>,
 	Expect<Equal<SplitAt<'david', 3>, ['dav', 'id']>>,
-	Expect<Equal<SplitAt<'david', 4>, ['davi', 'd']>>,
-	Expect<Equal<SplitAt<'david', 5>, ['david', '']>>
+	Expect<Equal<SplitAt<'david', 4>, ['davi', 'd']>>
+	// Expect<Equal<SplitAt<'david', 5>, ['david', '']>> // but should it really be allowed? I think not.
 ]

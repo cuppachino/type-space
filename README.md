@@ -63,6 +63,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
 - [`SplitAt`](src/strings/split-at.ts): Split a string literal into a tuple of two strings, separated by the given index, non-inclusive.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
+- [`StringIncludes`](src/string-includes.ts): A boolean type that is true if a string literal includes a given substring (⊆).
 
 ## 📜 Tuple Types
 
