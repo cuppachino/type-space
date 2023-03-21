@@ -26,6 +26,7 @@ export type { PopBy } from 'type-space/tuples/pop-by'
 export type { Push } from 'type-space/tuples/push'
 export type { Shift } from 'type-space/tuples/shift'
 export type { Unshift } from 'type-space/tuples/unshift'
+export type { ShiftBy } from 'type-space/tuples/shift-by'
 
 // utility
 export type { Combine } from 'type-space/combine'
