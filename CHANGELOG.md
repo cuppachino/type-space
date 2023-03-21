@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.15.0
+
+### Minor Changes
+
+- da75e9f: Add NumberLike, Chars, PopBy, ShiftBy, IntoNumber, IntoNumberLiteral, Assert, SplitAt, StringIncludes, StringIncludesProper
+
 ## 1.14.1
 
 ### Patch Changes
