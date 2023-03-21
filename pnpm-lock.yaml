@@ -16,7 +16,7 @@ specifiers:
   jest-runner-tsd: ^4.0.0
   prettier: 2.8.4
   tsc-alias: ^1.8.3
-  tsd-lite: ^0.6.0
+  tsd-lite: ^0.7.0
   typescript: 5.0.2
 
 devDependencies:
@@ -35,7 +35,7 @@ devDependencies:
   jest-runner-tsd: 4.0.0_@tsd+typescript@4.9.5
   prettier: 2.8.4
   tsc-alias: 1.8.3
-  tsd-lite: 0.6.0_@tsd+typescript@4.9.5
+  tsd-lite: 0.7.0_@tsd+typescript@4.9.5
   typescript: 5.0.2
 
 packages:
@@ -4090,6 +4090,15 @@ packages:
     engines: {node: '>=12'}
     peerDependencies:
       '@tsd/typescript': ^3.8.3 || ^4.0.7
+    dependencies:
+      '@tsd/typescript': 4.9.5
+    dev: true
+
+  /tsd-lite/0.7.0_@tsd+typescript@4.9.5:
+    resolution: {integrity: sha512-XhQ7w/RPzfjSb98LIQB1qx7yAvRV6+h5JFP4dCvd79Hbp23X8CCx4EdRAQm6faTkRdprKYvZE8kxlK6LpJp8vg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@tsd/typescript': 4.x || 5.x
     dependencies:
       '@tsd/typescript': 4.9.5
     dev: true
