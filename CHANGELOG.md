@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.16.0
+
+### Minor Changes
+
+- bb55d8d: add `Zip` type
+
 ## 1.15.1
 
 ### Patch Changes
