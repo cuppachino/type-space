@@ -60,6 +60,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 ## 💭 String Types
 
 - [`Chars`](src/chars.ts): Splits a string literal into a tuple of characters. Reads more clearly than `Split` in some cases.
+- [`ReverseString`](src/strings/reverse-string.ts): Reverse a string literal.
 - [`Split`](src/split.ts): Splits a string literal into a tuple of characters, separated by the given delimiter.
 - [`SplitAt`](src/strings/split-at.ts): Split a string literal into a tuple of two strings, separated by the given index, non-inclusive.
 - [`Stringify`](src/stringify.ts): Converts a type to a string literal type, if possible.
@@ -80,6 +81,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 - [`PartitionKeys`](src/partition-keys.ts): Extract a union of keys for each member in a tuple into a new tuple; order is preserved.
 - [`PartitionValues`](src/partition-values.ts): Create a tuple of value(s) for the given key(s) in each member of a tuple; order is preserved.
 - [`PartitionPick`](src/partition-pick.ts): Maps picked properties from each member of a tuple into a new tuple; order is preserved.
+- [`Reverse`](src/tuples/reverse.ts): Reverse the order of elements in a tuple type.
 
 ### A la Array.prototype
 
