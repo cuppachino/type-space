@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.17.1
+
+### Patch Changes
+
+- 74cf742: chore(readme): Add `Reverse` and `ReverseString` to README
+
 ## 1.17.0
 
 ### Minor Changes
