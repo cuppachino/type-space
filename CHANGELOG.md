@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 1.17.0
+
+### Minor Changes
+
+- 8e9b2ec: feat: add `Reverse` and `ReverseString` types
+
 ## 1.16.0
 
 ### Minor Changes
