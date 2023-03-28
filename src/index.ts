@@ -20,6 +20,7 @@ export type { SplitAt } from 'type-space/strings/split-at'
 export type { Stringify } from 'type-space/stringify'
 export type { StringIncludes } from 'type-space/strings/string-includes'
 export type { StringIncludesProper } from 'type-space/strings/string-includes-proper'
+export type { ReverseString } from 'type-space/strings/reverse-string'
 
 // numbers / strings
 export type { NumberLike } from 'type-space/number-like'
@@ -33,6 +34,7 @@ export type { Push } from 'type-space/tuples/push'
 export type { Shift } from 'type-space/tuples/shift'
 export type { Unshift } from 'type-space/tuples/unshift'
 export type { ShiftBy } from 'type-space/tuples/shift-by'
+export type { Reverse } from 'type-space/tuples/reverse'
 
 // utility
 export type { Assert } from 'type-space/assert'
