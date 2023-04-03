@@ -1,6 +1,6 @@
 import type { Combine } from './combine'
 import type { IgnoreMutability } from './ignore-mutability'
-import type { MergeRight } from './merge-right'
+import type { ShallowMergeRight } from './shallow-merge-right'
 
 /**
  * Merge all type members of a tuple into a single type. The resulting type will
@@ -31,10 +31,11 @@ import type { MergeRight } from './merge-right'
  * //   info: 'green'
  * // }
  * ```
+ * @deprecated Use `ShallowMergeRight`, `DeepMergeRight`, or `DeepMergeAllRight` instead.
  */
 export type MergeAllRight<
 	T extends unknown[] | readonly unknown[],
 	Acc = {}
 > = T extends IgnoreMutability<[...infer Head, infer A]>
-	? MergeAllRight<Head, MergeRight<Acc, A>>
+	? MergeAllRight<Head, ShallowMergeRight<Acc, A>>
 	: Combine<Acc>
