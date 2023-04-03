@@ -1,4 +1,4 @@
-import type { Assert } from './assert'
+import type { MergeAllRight } from './merge-all-right'
 
 type Indices<T extends unknown[] | readonly unknown[]> = Exclude<
 	keyof T,
@@ -20,8 +20,12 @@ type Indices<T extends unknown[] | readonly unknown[]> = Exclude<
  * ```
  */
 export type Zip<
-	Keys extends Record<Indices<Values>, PropertyKey>,
+	Keys extends readonly string[],
 	Values extends readonly unknown[]
-> = {
-	[K in Indices<Values> as Keys[K]]: Values[number]
-}
+> = MergeAllRight<{
+	[I in keyof Keys]: I extends keyof Values
+		? {
+				[K in Keys[I]]: Values[I]
+		  }
+		: never
+}>

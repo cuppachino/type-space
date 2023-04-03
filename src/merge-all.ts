@@ -27,6 +27,7 @@ import type { UnknownRecord } from './unknown-record'
  *   { info: 'green' },
  * ] as const
  * ```
+ * @deprecated Use `ShallowMergeRight`, `DeepMergeRight`, or `DeepMergeAllRight` instead.
  */
 export type MergeAll<
 	Records extends UnknownRecord[] | readonly UnknownRecord[],

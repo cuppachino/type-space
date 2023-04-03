@@ -1,3 +1,4 @@
+import type { IgnoreMutability } from 'type-space'
 import type { UnknownArray } from '../unknown-array'
 
 /**
@@ -11,6 +12,14 @@ import type { UnknownArray } from '../unknown-array'
  * type Tuple = Pop<typeof tuple> // [1, 2]
  * ```
  */
-export type Pop<T extends UnknownArray> = T extends [...infer U, any]
-	? U
-	: never
+export type Pop<T extends UnknownArray> = IgnoreMutability<T> extends T
+	? PopReadonly<T>
+	: [T] extends [[...infer R, any]]
+	? R
+	: [T]
+
+type PopReadonly<T extends readonly unknown[]> = [T] extends [
+	readonly [...infer R extends readonly unknown[], any]
+]
+	? readonly [...R]
+	: []

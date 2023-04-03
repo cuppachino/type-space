@@ -1,3 +1,5 @@
+import type { Equal } from '@type-challenges/utils'
+import type { IgnoreMutability } from 'type-space'
 import type { UnknownArray } from '../unknown-array'
 
 /**
@@ -10,4 +12,17 @@ import type { UnknownArray } from '../unknown-array'
  * type Tuple = Unshift<typeof tuple, 1> // [1, 2, 3]
  * ```
  */
-export type Unshift<T extends UnknownArray, V> = [V, ...T]
+export type Unshift<T extends UnknownArray, V> = IgnoreMutability<T> extends T
+	? readonly [V, ...T]
+	: [V, ...T]
+
+/**
+ * @internal
+ */
+type _unshift_cases = [
+	//    ^?
+	Equal<Unshift<[2, 3], 1>, [1, 2, 3]>,
+	//    ^?
+	Equal<Unshift<readonly [2, 3], 1>, readonly [1, 2, 3]>
+	//    ^?
+]

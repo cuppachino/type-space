@@ -19,6 +19,10 @@ export type ShiftBy<T extends UnknownArray, N extends number> = T extends [
 	? N extends 0
 		? T
 		: ShiftBy<U, Subtract<N, 1>>
+	: T extends readonly [any, ...infer U]
+	? N extends 0
+		? T
+		: ShiftBy<U, Subtract<N, 1>>
 	: T
 
 /**
