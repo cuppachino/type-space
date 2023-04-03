@@ -1,3 +1,4 @@
+import type { Equal } from '@type-challenges/utils'
 import type { UnknownArray } from '../unknown-array'
 
 /**
@@ -12,4 +13,17 @@ import type { UnknownArray } from '../unknown-array'
  */
 export type Shift<T extends UnknownArray> = T extends [any, ...infer U]
 	? U
+	: T extends readonly [any, ...infer U]
+	? readonly [...U]
 	: never
+
+/**
+ * @internal
+ */
+type _shift_cases = [
+	//    ^?
+	Equal<Shift<[1, 2]>, [2]>,
+	//    ^?
+	Equal<Shift<readonly [1, 2]>, readonly [2]>
+	//    ^?
+]

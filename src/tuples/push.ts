@@ -1,3 +1,5 @@
+import type { Equal } from '@type-challenges/utils'
+import type { IgnoreMutability } from 'type-space'
 import type { UnknownArray } from '../unknown-array'
 
 /**
@@ -10,4 +12,17 @@ import type { UnknownArray } from '../unknown-array'
  * type Tuple = Push<typeof tuple, 3> // [1, 2, 3]
  * ```
  */
-export type Push<T extends UnknownArray, V> = [...T, V]
+export type Push<T extends UnknownArray, V> = IgnoreMutability<T> extends T
+	? readonly [...T, V]
+	: [...T, V]
+
+/**
+ * @internal
+ */
+type _push_cases = [
+	//    ^?
+	Equal<Push<[1, 2], 3>, [1, 2, 3]>,
+	//    ^?
+	Equal<Push<readonly [1, 2], 3>, readonly [1, 2, 3]>
+	//    ^?
+]

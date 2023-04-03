@@ -19,6 +19,10 @@ export type PopBy<T extends UnknownArray, N extends number> = T extends [
 	? N extends 0
 		? T
 		: PopBy<U, Subtract<N, 1>>
+	: T extends readonly [...infer U, any]
+	? N extends 0
+		? T
+		: PopBy<readonly [...U], Subtract<N, 1>>
 	: T
 
 /**
@@ -28,5 +32,10 @@ type _PopBy_Cases = [
 	ExpectTrue<Equal<PopBy<['a', 'b', 'c'], 0>, ['a', 'b', 'c']>>,
 	ExpectTrue<Equal<PopBy<['a', 'b', 'c'], 1>, ['a', 'b']>>,
 	ExpectTrue<Equal<PopBy<['a', 'b', 'c'], 2>, ['a']>>,
-	ExpectTrue<Equal<PopBy<['a', 'b', 'c'], 3>, []>>
+	ExpectTrue<Equal<PopBy<['a', 'b', 'c'], 3>, []>>,
+	// readonly
+	ExpectTrue<
+		Equal<PopBy<readonly ['a', 'b', 'c'], 0>, readonly ['a', 'b', 'c']>
+	>,
+	ExpectTrue<Equal<PopBy<readonly ['a', 'b', 'c'], 1>, readonly ['a', 'b']>>
 ]
