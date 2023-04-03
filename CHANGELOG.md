@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 2.0.0
+
+### Major Changes
+
+- 6b92393: Refactor merge types
+
 ## 1.17.1
 
 ### Patch Changes
