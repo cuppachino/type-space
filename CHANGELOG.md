@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 2.0.1
+
+### Patch Changes
+
+- 1df07fa: ✨ Feat `RequireSome` type
+
 ## 2.0.0
 
 ### Major Changes
