@@ -16,6 +16,7 @@ export type { Mutable } from 'type-space/mutable'
 export type { ParseNumberLiteral } from 'type-space/parse-number-literal'
 export type { PartialSome } from 'type-space/partial-some'
 export type { PickAll } from 'type-space/pick-all'
+export type { RequireSome } from 'type-space/require-some'
 export type { Zip } from 'type-space/zip'
 
 // strings
