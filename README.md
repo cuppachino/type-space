@@ -106,6 +106,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 - [`Mutable`](src/mutable.ts): Recursively removes the `readonly` modifier from all properties of a type.
 - [`PartialSome`](src/partial-some.ts): Return a new type that allows the specified keys to be undefined.
 - [`PickAll`](src/pick-all.ts): Extract properties from _all_ members in a union, missing properties default to `| undefined`.
+- [`RequireSome`](src/require-some.ts): Return a new type requiring the selected keys.
 - [`Simplify`](src/simplify.ts): Simplify a type by mapping over its inferred properties - use when `Combine` cannot infer a deep type.
 - [`Subset`](src/subset.ts): TypeScript equivalent of `⊆`.
 - [`UnionLiteral`](src/union-literal.ts): Create a union from a literal and primitive type without losing the literal type.
