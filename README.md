@@ -111,6 +111,7 @@ The source code is fully tsdoc'd, so you can use your IDE's intellisense to refe
 - [`Subset`](src/subset.ts): TypeScript equivalent of `⊆`.
 - [`UnionLiteral`](src/union-literal.ts): Create a union from a literal and primitive type without losing the literal type.
 - [`UnionToIntersection`](src/union-to-intersection.ts): Create an intersection from all members of a union type.
+- [`UnionToTuple`](src/union-to-tuple.ts): Convert a union to a tuple type. The order is not guaranteed.
 - [`Zip`](src/zip.ts): From a tuple of keys and a tuple of values, create a new record.
 
 ### Extract
