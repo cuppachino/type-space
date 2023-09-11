@@ -1,5 +1,11 @@
 # @cuppachino/type-space
 
+## 2.1.0
+
+### Minor Changes
+
+- ca269d4: add UnionToTuple type
+
 ## 2.0.1
 
 ### Patch Changes
