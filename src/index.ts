@@ -49,6 +49,7 @@ export type { Combine } from 'type-space/combine'
 export type { Simplify } from 'type-space/simplify'
 export type { Subset } from 'type-space/subset'
 export type { UnionToIntersection } from 'type-space/union-to-intersection'
+export type { UnionToTuple } from 'type-space/union-to-tuple'
 export type { UnionLiteral } from 'type-space/union-literal'
 
 // base
