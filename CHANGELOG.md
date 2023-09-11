@@ -1,5 +1,12 @@
 # @cuppachino/type-space
 
+## 2.1.1
+
+### Patch Changes
+
+- f4d3df6: export UnionToTuple
+- d3e7bfe: Update README.md
+
 ## 2.1.0
 
 ### Minor Changes
