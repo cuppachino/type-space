@@ -24,9 +24,9 @@ expectAssignable<{
 }>(config)
 
 expectType<{
-	error: readonly ['red', 'bold']
-	warn: 'yellow'
-	info: 'green'
+	readonly error: readonly ['red', 'bold']
+	readonly warn: 'yellow'
+	readonly info: 'green'
 }>(config)
 
 const keys = ['a', 'b', 'c'] as const
