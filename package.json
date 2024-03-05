@@ -48,7 +48,7 @@
 		"jest-runner-tsd": "^5.0.0",
 		"prettier": "2.8.6",
 		"tsc-alias": "^1.8.7",
-		"tsd-lite": "^0.7.0",
+		"tsd-lite": "^0.9.0",
 		"typescript": "5.2.2"
 	}
 }
